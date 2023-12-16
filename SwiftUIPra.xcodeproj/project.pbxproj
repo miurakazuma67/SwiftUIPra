@@ -14,6 +14,7 @@
 		A44C0AB32B2D3A42009FA39F /* SwiftUIPraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44C0AB22B2D3A42009FA39F /* SwiftUIPraTests.swift */; };
 		A44C0ABD2B2D3A42009FA39F /* SwiftUIPraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44C0ABC2B2D3A42009FA39F /* SwiftUIPraUITests.swift */; };
 		A44C0ABF2B2D3A42009FA39F /* SwiftUIPraUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44C0ABE2B2D3A42009FA39F /* SwiftUIPraUITestsLaunchTests.swift */; };
+		A44C0ACC2B2D9314009FA39F /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44C0ACB2B2D9314009FA39F /* SecondView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		A44C0AB82B2D3A42009FA39F /* SwiftUIPraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIPraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A44C0ABC2B2D3A42009FA39F /* SwiftUIPraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIPraUITests.swift; sourceTree = "<group>"; };
 		A44C0ABE2B2D3A42009FA39F /* SwiftUIPraUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIPraUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A44C0ACB2B2D9314009FA39F /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				A44C0AA32B2D3A3E009FA39F /* ContentView.swift */,
 				A44C0AA52B2D3A41009FA39F /* Assets.xcassets */,
 				A44C0AA72B2D3A41009FA39F /* Preview Content */,
+				A44C0ACB2B2D9314009FA39F /* SecondView.swift */,
 			);
 			path = SwiftUIPra;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A44C0ACC2B2D9314009FA39F /* SecondView.swift in Sources */,
 				A44C0AA42B2D3A3E009FA39F /* ContentView.swift in Sources */,
 				A44C0AA22B2D3A3E009FA39F /* SwiftUIPraApp.swift in Sources */,
 			);
