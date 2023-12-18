@@ -14,7 +14,13 @@
 		A44C0AB32B2D3A42009FA39F /* SwiftUIPraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44C0AB22B2D3A42009FA39F /* SwiftUIPraTests.swift */; };
 		A44C0ABD2B2D3A42009FA39F /* SwiftUIPraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44C0ABC2B2D3A42009FA39F /* SwiftUIPraUITests.swift */; };
 		A44C0ABF2B2D3A42009FA39F /* SwiftUIPraUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44C0ABE2B2D3A42009FA39F /* SwiftUIPraUITestsLaunchTests.swift */; };
-		A44C0ACC2B2D9314009FA39F /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44C0ACB2B2D9314009FA39F /* SecondView.swift */; };
+		A44C0ACC2B2D9314009FA39F /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44C0ACB2B2D9314009FA39F /* SearchView.swift */; };
+		A4CE7B222B2F1B2000C4BB18 /* Canter-BoldShadow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4CE7B1C2B2F1B2000C4BB18 /* Canter-BoldShadow.ttf */; };
+		A4CE7B232B2F1B2000C4BB18 /* Canter-Bold3D.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4CE7B1D2B2F1B2000C4BB18 /* Canter-Bold3D.ttf */; };
+		A4CE7B242B2F1B2000C4BB18 /* Canter-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4CE7B1E2B2F1B2000C4BB18 /* Canter-Light.ttf */; };
+		A4CE7B252B2F1B2000C4BB18 /* Canter-BoldStrips.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4CE7B1F2B2F1B2000C4BB18 /* Canter-BoldStrips.ttf */; };
+		A4CE7B262B2F1B2000C4BB18 /* Canter-Outline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4CE7B202B2F1B2000C4BB18 /* Canter-Outline.ttf */; };
+		A4CE7B272B2F1B2000C4BB18 /* Canter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4CE7B212B2F1B2000C4BB18 /* Canter-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +51,14 @@
 		A44C0AB82B2D3A42009FA39F /* SwiftUIPraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIPraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A44C0ABC2B2D3A42009FA39F /* SwiftUIPraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIPraUITests.swift; sourceTree = "<group>"; };
 		A44C0ABE2B2D3A42009FA39F /* SwiftUIPraUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIPraUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		A44C0ACB2B2D9314009FA39F /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
+		A44C0ACB2B2D9314009FA39F /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		A4CE7B1C2B2F1B2000C4BB18 /* Canter-BoldShadow.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Canter-BoldShadow.ttf"; sourceTree = "<group>"; };
+		A4CE7B1D2B2F1B2000C4BB18 /* Canter-Bold3D.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Canter-Bold3D.ttf"; sourceTree = "<group>"; };
+		A4CE7B1E2B2F1B2000C4BB18 /* Canter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Canter-Light.ttf"; sourceTree = "<group>"; };
+		A4CE7B1F2B2F1B2000C4BB18 /* Canter-BoldStrips.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Canter-BoldStrips.ttf"; sourceTree = "<group>"; };
+		A4CE7B202B2F1B2000C4BB18 /* Canter-Outline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Canter-Outline.ttf"; sourceTree = "<group>"; };
+		A4CE7B212B2F1B2000C4BB18 /* Canter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Canter-Bold.ttf"; sourceTree = "<group>"; };
+		A4CE7B282B2F1BA400C4BB18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,11 +109,13 @@
 		A44C0AA02B2D3A3E009FA39F /* SwiftUIPra */ = {
 			isa = PBXGroup;
 			children = (
+				A4CE7B282B2F1BA400C4BB18 /* Info.plist */,
+				A4CE7B092B2EEE2100C4BB18 /* Fonts */,
 				A44C0AA12B2D3A3E009FA39F /* SwiftUIPraApp.swift */,
 				A44C0AA32B2D3A3E009FA39F /* ContentView.swift */,
 				A44C0AA52B2D3A41009FA39F /* Assets.xcassets */,
 				A44C0AA72B2D3A41009FA39F /* Preview Content */,
-				A44C0ACB2B2D9314009FA39F /* SecondView.swift */,
+				A44C0ACB2B2D9314009FA39F /* SearchView.swift */,
 			);
 			path = SwiftUIPra;
 			sourceTree = "<group>";
@@ -128,6 +143,19 @@
 				A44C0ABE2B2D3A42009FA39F /* SwiftUIPraUITestsLaunchTests.swift */,
 			);
 			path = SwiftUIPraUITests;
+			sourceTree = "<group>";
+		};
+		A4CE7B092B2EEE2100C4BB18 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A4CE7B212B2F1B2000C4BB18 /* Canter-Bold.ttf */,
+				A4CE7B1D2B2F1B2000C4BB18 /* Canter-Bold3D.ttf */,
+				A4CE7B1C2B2F1B2000C4BB18 /* Canter-BoldShadow.ttf */,
+				A4CE7B1F2B2F1B2000C4BB18 /* Canter-BoldStrips.ttf */,
+				A4CE7B1E2B2F1B2000C4BB18 /* Canter-Light.ttf */,
+				A4CE7B202B2F1B2000C4BB18 /* Canter-Outline.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,8 +262,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4CE7B222B2F1B2000C4BB18 /* Canter-BoldShadow.ttf in Resources */,
 				A44C0AA92B2D3A41009FA39F /* Preview Assets.xcassets in Resources */,
+				A4CE7B262B2F1B2000C4BB18 /* Canter-Outline.ttf in Resources */,
 				A44C0AA62B2D3A41009FA39F /* Assets.xcassets in Resources */,
+				A4CE7B242B2F1B2000C4BB18 /* Canter-Light.ttf in Resources */,
+				A4CE7B232B2F1B2000C4BB18 /* Canter-Bold3D.ttf in Resources */,
+				A4CE7B272B2F1B2000C4BB18 /* Canter-Bold.ttf in Resources */,
+				A4CE7B252B2F1B2000C4BB18 /* Canter-BoldStrips.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,7 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A44C0ACC2B2D9314009FA39F /* SecondView.swift in Sources */,
+				A44C0ACC2B2D9314009FA39F /* SearchView.swift in Sources */,
 				A44C0AA42B2D3A3E009FA39F /* ContentView.swift in Sources */,
 				A44C0AA22B2D3A3E009FA39F /* SwiftUIPraApp.swift in Sources */,
 			);
@@ -349,7 +383,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -403,7 +437,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -424,11 +458,13 @@
 				DEVELOPMENT_TEAM = 8HSC6WJMH6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUIPra/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -453,11 +489,13 @@
 				DEVELOPMENT_TEAM = 8HSC6WJMH6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUIPra/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

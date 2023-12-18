@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Canter-BoldStrips.ttf</string>
+		<string>Canter-Light.ttf</string>
+		<string>Canter-Outline.ttf</string>
+		<string>Canter-Bold.ttf</string>
+		<string>Canter-Bold3D.ttf</string>
+		<string>Canter-BoldShadow.ttf</string>
+	</array>
+</dict>
+</plist>

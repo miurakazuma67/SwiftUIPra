@@ -69,30 +69,68 @@ import SwiftUI
 // シェア画面
 struct ContentView: View {
     @State var name = ""
-    @State var pass = ""
     @State var address = ""
-    @State var tel = ""
+// グラデーション背景色を定義
+    let backGroundColor = LinearGradient(gradient: Gradient(colors: [Color.green, Color.mint]), startPoint: .bottom, endPoint: .top)
+// テーブルの背景色を初期化
+    init(){
+        UITableView.appearance().backgroundColor = .clear
+    }
+// 画面遷移の時に使用するbool値
+       @State private var isPresented: Bool = false
+
     var body: some View {
-        VStack{
-            Text("曲の良さを投稿する").font(.title)
-            Form{
-                Section(header: Text("曲を検索する")){
-                    TextField("曲名を入力してください", text: $name)
-//                    SecureField("パスワードを入力してください", text: $pass)
+        NavigationView {
+            VStack{
+                Form{
+                    Section(header: Text("曲名を検索する").font(.custom("Canter-Bold", size: 14))){
+                        TextField("曲名を入力してください", text: $name)
+                    }
+                    Section(header: Text("曲の好きなところを自由に書こう").font(.custom("Canter-Bold", size: 14))){
+                        TextField("", text: $address)
+                            .onTapGesture {
+                                // textFieldタップ時の処理
+                                // 連打対策したい 現在はできていない
+                                isPresented = true
+                            }
+                            .fullScreenCover(isPresented: $isPresented) { //フルスクリーンの画面遷移
+                                SearchView()
+                            }
+                    }
                 }
-                Section(header: Text("曲の好きなところを自由に書こう")){
-                    TextField("", text: $address)
-//                    SecureField("電話番号", text: $tel)
+
+                Spacer(minLength: 0)
+//                Button("投稿する", action: {})
+//                    .frame(maxWidth: .infinity, minHeight: 44.0)
+//                    .background(Color.green.ignoresSafeArea(edges: .bottom))
+//                    .foregroundColor(Color.white)
+//                // OK
+            }.background(backGroundColor) // Form
+            .navigationTitle("曲をシェア")
+            .font(.custom("Canter-Bold", size: 16))
+            .navigationBarTitleDisplayMode(.inline) // .inline指定でデフォルトのnavigationControllerと同じ見た目になる
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+
+                    } label: {
+                        Text("キャンセル")
+                            .font(.custom("Canter-Bold", size: 14))
+                            .foregroundColor(.red)
+                    }
+                }
+
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+
+                    } label: {
+                        Text("投稿")
+                            .font(.custom("Canter-Bold", size: 14))
+                            .foregroundColor(.black)
+                    }
                 }
             }
-
-            Spacer(minLength: 0)
-            Button("投稿する", action: {})
-                .frame(maxWidth: .infinity, minHeight: 44.0)
-                .background(Color.green.ignoresSafeArea(edges: .bottom))
-                .foregroundColor(Color.white)
-            // OK
-        }
+        } // NavigationView
     }
 }
 
