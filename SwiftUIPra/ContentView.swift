@@ -85,9 +85,6 @@ struct ContentView: View {
                 Form{
                     Section(header: Text("曲名を検索する").font(.custom("Canter-Bold", size: 14))){
                         TextField("曲名を入力してください", text: $name)
-                    }
-                    Section(header: Text("曲の好きなところを自由に書こう").font(.custom("Canter-Bold", size: 14))){
-                        TextField("", text: $address)
                             .onTapGesture {
                                 // textFieldタップ時の処理
                                 // 連打対策したい 現在はできていない
@@ -96,6 +93,9 @@ struct ContentView: View {
                             .fullScreenCover(isPresented: $isPresented) { //フルスクリーンの画面遷移
                                 SearchView()
                             }
+                    }
+                    Section(header: Text("曲の好きなところを自由に書こう").font(.custom("Canter-Bold", size: 14))){
+                        TextField("", text: $address)
                     }
                 }
 
@@ -116,7 +116,7 @@ struct ContentView: View {
                     } label: {
                         Text("キャンセル")
                             .font(.custom("Canter-Bold", size: 14))
-                            .foregroundColor(.red)
+                            .foregroundColor(.gray)
                     }
                 }
 
