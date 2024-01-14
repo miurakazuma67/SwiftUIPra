@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// 曲名/アーティストの検索機能
 struct SearchView: View {
     var body: some View {
         Text("検索画面")
