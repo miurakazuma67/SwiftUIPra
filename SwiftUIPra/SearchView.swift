@@ -7,10 +7,22 @@
 
 import SwiftUI
 
-// 曲名/アーティストの検索機能
 struct SearchView: View {
+    @ObservedObject private var viewModel: SearchViewModel = SearchViewModel()
+
     var body: some View {
-        Text("検索画面")
+        NavigationView {
+            VStack {
+                SearchBar(text: $viewModel.searchText)
+                    .padding()
+
+                List(viewModel.searchResults, id: \.self) { result in
+                    Text(result)
+                }
+                .listStyle(InsetGroupedListStyle())
+            }
+            .navigationBarTitle("検索画面")
+        }
     }
 }
 

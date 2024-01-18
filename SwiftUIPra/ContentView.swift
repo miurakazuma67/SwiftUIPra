@@ -70,6 +70,7 @@ import SwiftUI
 struct ContentView: View {
     @State var name = ""
     @State var address = ""
+    @State private var isPressed = false //ボタンがタップされていたかどうか
 // グラデーション背景色を定義
     let backGroundColor = LinearGradient(gradient: Gradient(colors: [Color.green, Color.mint]), startPoint: .bottom, endPoint: .top)
 // テーブルの背景色を初期化
