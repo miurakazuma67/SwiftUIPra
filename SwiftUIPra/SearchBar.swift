@@ -20,6 +20,8 @@ struct SearchBar: View {
 
             Button(action: {
                 // 検索ボタンがタップされたときのアクションを追加することもできます
+                // タップ時に検索処理を実行
+                
             }) {
                 Image(systemName: "magnifyingglass")
                     .imageScale(.medium)

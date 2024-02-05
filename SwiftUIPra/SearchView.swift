@@ -14,14 +14,13 @@ struct SearchView: View {
         NavigationView {
             VStack {
                 SearchBar(text: $viewModel.searchText)
-                    .padding()
 
                 List(viewModel.searchResults, id: \.self) { result in
                     Text(result)
                 }
                 .listStyle(InsetGroupedListStyle())
             }
-            .navigationBarTitle("検索画面")
+            .navigationBarTitle("曲を検索する")
         }
     }
 }
