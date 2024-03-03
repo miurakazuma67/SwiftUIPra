@@ -38,6 +38,7 @@ class SearchViewModel: ObservableObject {
     /// アクセストークンを取得
     func fetchAccessToken(clientID: String, clientSecret: String, completion: @escaping (String?) -> Void) {
         let credentials = "\(clientID):\(clientSecret)".data(using: .utf8)!.base64EncodedString()
+
         var request = URLRequest(url: URL(string: "https://accounts.spotify.com/api/token")!)
         request.httpMethod = "POST"
         request.addValue("Basic \(credentials)", forHTTPHeaderField: "Authorization")
@@ -53,7 +54,7 @@ class SearchViewModel: ObservableObject {
             if let json = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
                let accessToken = json["access_token"] as? String {
                 completion(accessToken)
-                print(accessToken)
+//                print(accessToken)
                 print(request)
             } else {
                 completion(nil)
@@ -64,6 +65,9 @@ class SearchViewModel: ObservableObject {
 
     /// 検索クエリとアクセストークンを使用してSpotifyで曲またはアーティストを検索する関数
     func searchSpotify(query: String, type: String, accessToken: String, completion: @escaping (Data?, URLResponse?, Error?) -> Void) {
+        let env = try! LoadEnv()
+        print(env.value("CLIENT_ID") ?? ".envからの値取得失敗")
+
         let urlEncodedQuery = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
         let urlString = "https://api.spotify.com/v1/search?q=\(urlEncodedQuery)&type=\(type)&limit=10"
         guard let url = URL(string: urlString) else { return }
