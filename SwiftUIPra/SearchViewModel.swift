@@ -80,12 +80,13 @@ class SearchViewModel: ObservableObject {
         task.resume()
     }
 
-    /// アクセストークンの再取得をする関数(必要かはわからない)
+    /// アクセストークンの再取得+再検索をする関数(必要かはわからない)
     func refreshTokenAndRetrySearch(query: String, type: String, clientID: String, clientSecret: String, originalCompletion: @escaping (Data?, URLResponse?, Error?) -> Void) {
         // アクセストークンを再取得
         fetchAccessToken(clientID: clientID, clientSecret: clientSecret) { newAccessToken in
             DispatchQueue.main.async {
                 if let newAccessToken = newAccessToken {
+                    // indicatorを回す
                     // 新しいトークンを使用して検索を再試行
                     self.searchSpotify(query: query, type: type, accessToken: newAccessToken, completion: originalCompletion)
                 } else {
@@ -94,6 +95,37 @@ class SearchViewModel: ObservableObject {
                 }
             }
         }
+    }
+
+
+    /// リフレッシュトークンを使用したアクセストークンの更新
+    func refreshToken(refreshToken: String, clientID: String, clientSecret: String, completion: @escaping (String?) -> Void) {
+        let params = "grant_type=refresh_token&refresh_token=\(refreshToken)"
+        let postData = params.data(using: .utf8)
+
+        var request = URLRequest(url: URL(string: "https://accounts.spotify.com/api/token")!)
+        request.httpMethod = "POST"
+        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+
+        let credentials = "\(clientID):\(clientSecret)".data(using: .utf8)!.base64EncodedString()
+        request.setValue("Basic \(credentials)", forHTTPHeaderField: "Authorization")
+
+        request.httpBody = postData
+
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data, error == nil else {
+                completion(nil)
+                return
+            }
+
+            if let json = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
+               let newAccessToken = json["access_token"] as? String {
+                completion(newAccessToken)
+            } else {
+                completion(nil)
+            }
+        }
+        task.resume()
     }
 }
 

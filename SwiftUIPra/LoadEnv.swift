@@ -11,6 +11,7 @@ enum LoadEnvError: Error {
     case FileNotFound
 }
 
+/// .envに指定した環境変数を読み込むための構造体 .envを隠蔽するために使用
 struct LoadEnv {
 
     init(fileAt path: String = "\(FileManager.default.currentDirectoryPath)/.env") throws {
